@@ -31,40 +31,16 @@
           defn comp-tabs () $ group nil
             comp-button
               {}
-                :position $ [] 40 260 0
-                :color $ [] 0.9 0.4 0.5 1
-                :size 20
-              fn (e d!) (d! :tab :mountains)
-            comp-button
-              {}
-                :position $ [] 0 260 0
-                :color $ [] 0.5 0.5 0.9 1
-                :size 20
-              fn (e d!) (d! :tab :bends)
-            comp-button
-              {}
-                :position $ [] 80 260 0
-                :color $ [] 0.8 0.9 0.2 1
-                :size 20
-              fn (e d!) (d! :tab :city)
-            comp-button
-              {}
-                :position $ [] 120 260 0
+                :position $ [] 0 200 0
                 :color $ [] 0.3 0.9 0.2 1
                 :size 20
               fn (e d!) (d! :tab :cube)
             comp-button
               {}
-                :position $ [] 160 260 0
-                :color $ [] 0.8 0.0 0.9 1
+                :position $ [] 40 200 0
+                :color $ [] 0.8 0.3 1 1
                 :size 20
-              fn (e d!) (d! :tab :ribbon)
-            comp-button
-              {}
-                :position $ [] 200 260 0
-                :color $ [] 0.2 0.9 0.6 1
-                :size 20
-              fn (e d!) (d! :tab :necklace)
+              fn (e d!) (d! :tab :todo)
       :ns $ quote
         ns app.comp.container $ :require
           lagopus.alias :refer $ group object
@@ -85,7 +61,7 @@
     |app.main $ {}
       :defs $ {}
         |*store $ quote
-          defatom *store $ {} (:tab :ribbon)
+          defatom *store $ {} (:tab :cube)
         |canvas $ quote
           def canvas $ js/document.querySelector "\"canvas"
         |dispatch! $ quote
@@ -97,25 +73,6 @@
                   do (js/console.warn ":unknown op" op data) store
                   :tab $ assoc store :tab data
               if (not= next-store store) (reset! *store next-store)
-        |handle-compilation $ quote
-          defn handle-compilation (info code)
-            if-let
-              error $ -> info .-messages .-0
-              let
-                  line-num $ .-lineNum error
-                  line-pos $ .-linePos error
-                  lines $ .split-lines code
-                  message $ str line-num "\" "
-                    nth lines $ dec line-num
-                    , &newline
-                      .join-str
-                        repeat "\" " $ +
-                          count $ str line-num
-                          , line-pos
-                        , "\""
-                      , "\"^ " (.-message error)
-                js/console.error $ str "\"WGSL Error:" &newline message
-                hud! "\"error" $ str "\"WGSL Errors:" &newline message
         |main! $ quote
           defn main! () (hint-fn async)
             if dev? $ load-console-formatter!
@@ -148,3 +105,4 @@
           "\"bottom-tip" :default hud!
           "\"./calcit.build-errors" :default build-errors
           memof.once :refer $ reset-memof1-caches!
+          lagopus.main :refer $ handle-compilation
