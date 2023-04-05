@@ -105,4 +105,4 @@
           "\"bottom-tip" :default hud!
           "\"./calcit.build-errors" :default build-errors
           memof.once :refer $ reset-memof1-caches!
-          lagopus.main :refer $ handle-compilation
+          lagopus.util :refer $ handle-compilation
