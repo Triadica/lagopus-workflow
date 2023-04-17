@@ -69,9 +69,10 @@
             if dev? $ js/console.log op data
             let
                 store @*store
-                next-store $ case-default op
-                  do (js/console.warn ":unknown op" op data) store
-                  :tab $ assoc store :tab data
+                next-store $ if (list? op) (update-states  store op data)
+                  case-default op
+                    do (js/console.warn ":unknown op" op data) store
+                    :tab $ assoc store :tab data
               if (not= next-store store) (reset! *store next-store)
         |main! $ quote
           defn main! () (hint-fn async)
@@ -106,3 +107,4 @@
           "\"./calcit.build-errors" :default build-errors
           memof.once :refer $ reset-memof1-caches!
           lagopus.util :refer $ handle-compilation
+          lagopus.cursor :refer $ update-states
