@@ -551,6 +551,35 @@
                   |b $ {} (:at 1677433401569) (:by |rJG4IHzWf) (:type :expr)
                     :data $ {}
                       |T $ {} (:at 1677433216378) (:by |rJG4IHzWf) (:text |initializeContext) (:type :leaf)
+              |nT $ {} (:at 1682271901924) (:by |rJG4IHzWf) (:type :expr)
+                :data $ {}
+                  |T $ {} (:at 1682271901924) (:by |rJG4IHzWf) (:text |initializeCanvasTextures) (:type :leaf)
+              |nj $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:type :expr)
+                :data $ {}
+                  |T $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |reset-clear-color!) (:type :leaf)
+                  |b $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:type :expr)
+                    :data $ {}
+                      |T $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |either) (:type :leaf)
+                      |b $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |bg-color) (:type :leaf)
+                      |h $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:type :expr)
+                        :data $ {}
+                          |T $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |{}) (:type :leaf)
+                          |b $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:type :expr)
+                            :data $ {}
+                              |T $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |:r) (:type :leaf)
+                              |b $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |0.18) (:type :leaf)
+                          |h $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:type :expr)
+                            :data $ {}
+                              |T $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |:g) (:type :leaf)
+                              |b $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |0.2) (:type :leaf)
+                          |l $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:type :expr)
+                            :data $ {}
+                              |T $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |:b) (:type :leaf)
+                              |b $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |0.36) (:type :leaf)
+                          |o $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:type :expr)
+                            :data $ {}
+                              |T $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |:a) (:type :leaf)
+                              |b $ {} (:at 1682271908297) (:by |rJG4IHzWf) (:text |1) (:type :leaf)
               |o $ {} (:at 1677433135290) (:by |rJG4IHzWf) (:type :expr)
                 :data $ {}
                   |T $ {} (:at 1677433136904) (:by |rJG4IHzWf) (:text |render-app!) (:type :leaf)
@@ -579,14 +608,14 @@
                           |T $ {} (:at 1677604731253) (:by |rJG4IHzWf) (:text |e) (:type :leaf)
                       |e $ {} (:at 1679819899455) (:by |rJG4IHzWf) (:type :expr)
                         :data $ {}
-                          |T $ {} (:at 1679819904072) (:by |rJG4IHzWf) (:text |resetCanvasHeight) (:type :leaf)
+                          |T $ {} (:at 1682272088912) (:by |rJG4IHzWf) (:text |resetCanvasSize) (:type :leaf)
                           |b $ {} (:at 1679819936880) (:by |rJG4IHzWf) (:text |canvas) (:type :leaf)
                       |h $ {} (:at 1677433354368) (:by |rJG4IHzWf) (:type :expr)
                         :data $ {}
                           |T $ {} (:at 1678027099048) (:by |rJG4IHzWf) (:text |paintLagopusTree) (:type :leaf)
               |uD $ {} (:at 1679819952782) (:by |rJG4IHzWf) (:type :expr)
                 :data $ {}
-                  |T $ {} (:at 1679819952782) (:by |rJG4IHzWf) (:text |resetCanvasHeight) (:type :leaf)
+                  |T $ {} (:at 1682272091786) (:by |rJG4IHzWf) (:text |resetCanvasSize) (:type :leaf)
                   |b $ {} (:at 1679819952782) (:by |rJG4IHzWf) (:text |canvas) (:type :leaf)
               |uT $ {} (:at 1677948445310) (:by |rJG4IHzWf) (:type :expr)
                 :data $ {}
@@ -711,7 +740,8 @@
                         |h $ {} (:at 1678027026259) (:by |rJG4IHzWf) (:text |paintLagopusTree) (:type :leaf)
                         |l $ {} (:at 1678027030023) (:by |rJG4IHzWf) (:text |renderLagopusTree) (:type :leaf)
                         |o $ {} (:at 1678027037402) (:by |rJG4IHzWf) (:text |initializeContext) (:type :leaf)
-                        |q $ {} (:at 1679819906900) (:by |rJG4IHzWf) (:text |resetCanvasHeight) (:type :leaf)
+                        |q $ {} (:at 1682272101639) (:by |rJG4IHzWf) (:text |resetCanvasSize) (:type :leaf)
+                        |s $ {} (:at 1682271921526) (:by |rJG4IHzWf) (:text |initializeCanvasTextures) (:type :leaf)
                 |q $ {} (:at 1677433288307) (:by |rJG4IHzWf) (:type :expr)
                   :data $ {}
                     |T $ {} (:at 1677433295405) (:by |rJG4IHzWf) (:text "|\"@triadica/touch-control") (:type :leaf)
@@ -751,6 +781,7 @@
                     |h $ {} (:at 1680333656298) (:by |rJG4IHzWf) (:type :expr)
                       :data $ {}
                         |T $ {} (:at 1680333659123) (:by |rJG4IHzWf) (:text |handle-compilation) (:type :leaf)
+                        |b $ {} (:at 1682271952673) (:by |rJG4IHzWf) (:text |reset-clear-color!) (:type :leaf)
                 |x $ {} (:at 1681580833424) (:by |rJG4IHzWf) (:type :expr)
                   :data $ {}
                     |T $ {} (:at 1681580835527) (:by |rJG4IHzWf) (:text |lagopus.cursor) (:type :leaf)
@@ -758,6 +789,13 @@
                     |h $ {} (:at 1681580836637) (:by |rJG4IHzWf) (:type :expr)
                       :data $ {}
                         |T $ {} (:at 1681580838060) (:by |rJG4IHzWf) (:text |update-states) (:type :leaf)
+                |y $ {} (:at 1682271965993) (:by |rJG4IHzWf) (:type :expr)
+                  :data $ {}
+                    |T $ {} (:at 1682271966304) (:by |rJG4IHzWf) (:text |lagopus.config) (:type :leaf)
+                    |b $ {} (:at 1682271967483) (:by |rJG4IHzWf) (:text |:refer) (:type :leaf)
+                    |h $ {} (:at 1682271973003) (:by |rJG4IHzWf) (:type :expr)
+                      :data $ {}
+                        |T $ {} (:at 1682271972522) (:by |rJG4IHzWf) (:text |bg-color) (:type :leaf)
   :users $ {}
     |rJG4IHzWf $ {} (:avatar nil) (:id |rJG4IHzWf) (:name |chen) (:nickname |chen) (:password |d41d8cd98f00b204e9800998ecf8427e) (:theme :star-trail)
     |root $ {} (:avatar nil) (:id |root) (:name |root) (:nickname |root) (:password |d41d8cd98f00b204e9800998ecf8427e) (:theme :star-trail)
