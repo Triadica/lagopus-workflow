@@ -34,13 +34,15 @@
                 :position $ [] 0 200 0
                 :color $ [] 0.3 0.9 0.2 1
                 :size 20
-              fn (e d!) (d! :tab :cube)
+              fn (e d!)
+                d! $ :: :tab :cube
             comp-button
               {}
                 :position $ [] 40 200 0
                 :color $ [] 0.8 0.3 1 1
                 :size 20
-              fn (e d!) (d! :tab :todo)
+              fn (e d!)
+                d! $ :: :tab :todo
       :ns $ quote
         ns app.comp.container $ :require
           lagopus.alias :refer $ group object
@@ -65,14 +67,15 @@
         |canvas $ quote
           def canvas $ js/document.querySelector "\"canvas"
         |dispatch! $ quote
-          defn dispatch! (op data)
-            if dev? $ js/console.log op data
+          defn dispatch! (op)
+            if dev? $ js/console.log op
             let
                 store @*store
-                next-store $ if (list? op) (update-states  store op data)
-                  case-default op
-                    do (js/console.warn ":unknown op" op data) store
-                    :tab $ assoc store :tab data
+                next-store $ tag-match op
+                    :states cursor s
+                    update-states store cursor s
+                  (:tab t) (assoc store :tab t)
+                  _ $ do (eprintln ":unknown op" op) store
               if (not= next-store store) (reset! *store next-store)
         |main! $ quote
           defn main! () (hint-fn async)
@@ -85,7 +88,7 @@
             renderControl
             startControlLoop 10 onControlEvent
             set! js/window.__lagopusHandleCompilationInfo handle-compilation
-            set! js/window.onresize $ fn (e) (resetCanvasSize canvas) (paintLagopusTree)
+            set! js/window.onresize $ fn (e) (resetCanvasSize canvas) (initializeCanvasTextures) (paintLagopusTree)
             resetCanvasSize canvas
             add-watch *store :change $ fn (next store) (render-app!)
             setupMouseEvents canvas
