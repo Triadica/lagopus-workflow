@@ -20,7 +20,7 @@ var<uniform> uniforms: UBO;
 // main
 
 struct VertexOut {
-  @builtin(position) position : vec4f,
+  @builtin(position) position: vec4f,
   @location(0) original: vec3f,
 };
 
@@ -32,7 +32,7 @@ fn vertex_main(
   let p1 = position;
   let p = transform_perspective(p1.xyz).point_position;
   let scale: f32 = 0.002;
-  output.position = vec4(p[0]*scale, p[1]*scale, p[2]*scale, 1.0);
+  output.position = vec4(p[0] * scale, p[1] * scale, p[2] * scale, 1.0);
   output.original = position;
   // output.position = position;
   // output.h = 0.0;
@@ -49,7 +49,7 @@ fn fragment_main(vtx_out: VertexOut) -> @location(0) vec4f {
   let y_far = abs(p.y - middle) > limit;
   let z_far = abs(p.z - middle) > limit;
   let far = (x_far && y_far) || (y_far && z_far) || (z_far && x_far);
-  if (far) {
+  if far {
     return vec4f(1.0, 1.0, 1.0, 1.0);
   } else {
     return vec4f(0.6, 0.6, 0.6, 1.0);
