@@ -1,21 +1,6 @@
-struct UBO {
-  cone_back_scale: f32,
-  viewport_ratio: f32,
-  look_distance: f32,
-  scale: f32,
-  forward: vec3f,
-  // direction up overhead, better unit vector
-  upward: vec3f,
-  rightward: vec3f,
-  camera_position: vec3f,
-};
 
-@group(0) @binding(0)
-var<uniform> uniforms: UBO;
-
-{{perspective}}
-
-{{simplex}}
+#import lagopus::perspective
+#import lagopus::simplex
 
 // main
 
@@ -32,10 +17,8 @@ fn vertex_main(
   let p1 = position;
   let p = transform_perspective(p1.xyz).point_position;
   let scale: f32 = 0.002;
-  output.position = vec4(p[0] * scale, p[1] * scale, p[2] * scale, 1.0);
+  output.position = vec4(p.xyz * scale, 1.0);
   output.original = position;
-  // output.position = position;
-  // output.h = 0.0;
   return output;
 }
 
