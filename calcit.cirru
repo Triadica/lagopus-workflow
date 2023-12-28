@@ -266,7 +266,7 @@
                               |T $ %{} :Leaf (:at 1677952383571) (:by |rJG4IHzWf) (:text |:position)
                               |b $ %{} :Expr (:at 1677952383571) (:by |rJG4IHzWf)
                                 :data $ {}
-                                  |T $ %{} :Leaf (:at 1677952383571) (:by |rJG4IHzWf) (:text |[])
+                                  |T $ %{} :Leaf (:at 1703524475257) (:by |rJG4IHzWf) (:text |v3)
                                   |b $ %{} :Leaf (:at 1680333420049) (:by |rJG4IHzWf) (:text |0)
                                   |h $ %{} :Leaf (:at 1680333438067) (:by |rJG4IHzWf) (:text |200)
                                   |l $ %{} :Leaf (:at 1677952383571) (:by |rJG4IHzWf) (:text |0)
@@ -310,7 +310,7 @@
                               |T $ %{} :Leaf (:at 1677952383571) (:by |rJG4IHzWf) (:text |:position)
                               |b $ %{} :Expr (:at 1677952383571) (:by |rJG4IHzWf)
                                 :data $ {}
-                                  |T $ %{} :Leaf (:at 1677952383571) (:by |rJG4IHzWf) (:text |[])
+                                  |T $ %{} :Leaf (:at 1703524510062) (:by |rJG4IHzWf) (:text |v3)
                                   |b $ %{} :Leaf (:at 1680333447115) (:by |rJG4IHzWf) (:text |40)
                                   |h $ %{} :Leaf (:at 1680333438067) (:by |rJG4IHzWf) (:text |200)
                                   |l $ %{} :Leaf (:at 1677952383571) (:by |rJG4IHzWf) (:text |0)
@@ -399,6 +399,13 @@
                     |h $ %{} :Expr (:at 1678729932287) (:by |rJG4IHzWf)
                       :data $ {}
                         |T $ %{} :Leaf (:at 1678729932961) (:by |rJG4IHzWf) (:text |c+)
+                |s $ %{} :Expr (:at 1703524480331) (:by |rJG4IHzWf)
+                  :data $ {}
+                    |T $ %{} :Leaf (:at 1703524491038) (:by |rJG4IHzWf) (:text |quaternion.vector)
+                    |b $ %{} :Leaf (:at 1703524482839) (:by |rJG4IHzWf) (:text |:refer)
+                    |h $ %{} :Expr (:at 1703524483121) (:by |rJG4IHzWf)
+                      :data $ {}
+                        |T $ %{} :Leaf (:at 1703524483496) (:by |rJG4IHzWf) (:text |v3)
     |app.config $ %{} :FileEntry
       :defs $ {}
         |dev? $ %{} :CodeEntry (:doc |)

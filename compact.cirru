@@ -34,14 +34,14 @@
             defn comp-tabs () $ group nil
               comp-button
                 {}
-                  :position $ [] 0 200 0
+                  :position $ v3 0 200 0
                   :color $ [] 0.3 0.9 0.2 1
                   :size 20
                 fn (e d!)
                   d! $ :: :tab :cube
               comp-button
                 {}
-                  :position $ [] 40 200 0
+                  :position $ v3 40 200 0
                   :color $ [] 0.8 0.3 1 1
                   :size 20
                 fn (e d!)
@@ -56,6 +56,7 @@
             lagopus.comp.spots :refer $ comp-spots
             memof.once :refer $ memof1-call
             quaternion.core :refer $ c+
+            quaternion.vector :refer $ v3
     |app.config $ %{} :FileEntry
       :defs $ {}
         |dev? $ %{} :CodeEntry (:doc |)
